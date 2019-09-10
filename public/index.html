@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Countries of the World</title>
+  <script src="js/bundle.js" charset="utf-8"></script>
+</head>
+<body>
+
+  <div id="app">
+    <h1>Countries of the World</h1>
+    <img id="flag-img" v-if="countryDataUrl" :src="countryDataUrl">
+    <!-- <p v-if="countryDataUrl" :src="countryDataUrl"></p> -->
+    <button v-on:click="fetchCountry">Get a Country</button>
+    <ul>
+      <li v-for="country in countryDataUrl">{{ country }}</li>
+    </ul>
+  </div>
+
+</body>
+</html>
