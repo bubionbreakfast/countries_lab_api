@@ -13,7 +13,9 @@
     <!-- <p v-if="countryDataUrl" :src="countryDataUrl"></p> -->
     <button v-on:click="fetchCountry">Get a Country</button>
     <ul>
-      <li v-for="country in countryDataUrl">{{ country }}</li>
+      <li v-for="country in countryDataUrl">{{ country.name  }}
+        <img :src="country.flag">
+      </li>
     </ul>
   </div>
 

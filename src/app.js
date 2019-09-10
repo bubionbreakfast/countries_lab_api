@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
       fetchCountry: function () {
         fetch('https://restcountries.eu/rest/v2/all')
         .then(response => response.json())
-        .then(data => this.countryDataUrl = data.name)
+        .then(data => this.countryDataUrl = data)
         // .then(data => this.countryDataUrl = data.flag)
         .catch(err => console.err);
 
